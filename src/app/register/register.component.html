@@ -1,0 +1,82 @@
+<body style="background-color:rgb(53, 229, 235)"  > 
+ 
+ 
+  
+<div class="header" style="text-align:center">
+  <h1 style="color:blue" >LOGIN</h1>
+</div>
+<br />
+
+<form
+  #f="ngForm"
+  name="form"
+  (ngSubmit)="addRegister()"
+  class="row g-12"
+  style="text-align:center"
+>
+
+<div>
+  
+    <div class="col-12" >
+      <p>
+      <label for="firstname"  style="font-style:oblique" >FIRST NAME</label>&nbsp;
+      <input type="text" id="fname" name="firstname" placeholder="Enter your first name"  required="true" [(ngModel)]="model.firstname" />
+    </p>
+    </div>
+    <br />
+
+    <div class="col-12" >
+      <p>
+      <label for="lastname"  style="font-style:oblique" >LAST NAME</label>&nbsp;
+      <input type="text" id="lname" name="lastname" placeholder="Enter your last name"  required="true" [(ngModel)]="model.lastname" />
+    </p>
+    </div>
+    <br />
+
+    <div class="col-12" >
+      <p>
+      <label for="username"  style="font-style:oblique" >USER NAME</label>&nbsp;
+      <input type="text" id="uname" name="username" placeholder="Enter your user name"  required="true" [(ngModel)]="model.username" />
+    </p>
+    </div>
+    <br />
+
+
+ <div class="col-12" >
+      <p>
+      <label for="password"  style="font-style:oblique" >PASSWORD</label>&nbsp;
+      <input type="text" id="pwd" name="username" placeholder="Enter your password"  required="true" [(ngModel)]="model.password" />
+    </p>
+    </div>
+    <br />
+     
+ 
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>FIRST NAME</th>
+      <th>LAST NAME</th>
+      <th>USER NAME</th>
+      <th>PASS WORD</th>
+     
+    </tr>
+  </thead>
+  <!-- tbody -->
+  <tbody>
+    <tr *ngFor="let ticketbooking of ticketbooking">
+      <td>{{ register.id }}</td>
+      <td>{{ register.firstname }}</td>
+      <td>{{ register.lastname }}</td>
+      <td>{{ register.username }}</td>
+      <td>{{ register.password }}</td>
+    
+       <td>
+        <button (click)="editRegister(register.id)" value="Display()" style="color:blue">edit</button>
+      </td> 
+      <td>
+        <button (click)="deleteRegister(register.id)" value="Display()" style="color:blue">delete</button>
+      </td> 
+    </tr>
+  </tbody>
+</table>
