@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Register } from './register';
+import { RegisterService } from './register.service';
 
 
 @Component({
@@ -31,14 +32,10 @@ export class RegisterComponent implements OnInit {
       });
   }
   editRegister(id: string) {
-
     alert(id);
-
     this.registerService
-
-      .getRegisterService(id)
-
-      .subscribe((data: any) => (this.model = data));
+    .getRegisterService(id)
+    .subscribe((data: any) => (this.model = data));
 
   }
  
