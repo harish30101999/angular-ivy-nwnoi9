@@ -34,7 +34,7 @@ export class RegisterService {
     );
   }
   
-  public updateRegsiterService(id, register: Register) {
+  public updateRegisterService(id, register: Register) {
     const headers = { 'content-type': 'application/json' };
     return this.httpClient.put(
       'http://localhost:8080/register/' + id,
