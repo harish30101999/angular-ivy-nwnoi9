@@ -19,6 +19,22 @@ export class RegisterComponent implements OnInit {
   constructor(private registerService: RegisterService) {}
 
   ngOnInit() 
+  // : void {
+  //   this.form = new FormGroup({
+  //     name: new FormControl(this.form.fname, [
+  //       Validators.required,
+  //       Validators.minLength(4),
+        
+  //     ]),
+  //     // alterEgo: new FormControl(this.hero.alterEgo),
+  //     // power: new FormControl(this.hero.power, Validators.required)
+  //   });
+  
+  // }
+  
+  // get name() { return this.form.get('name'); }
+  
+  // get power() { return this.form.get('power'); }
   
   {
     this.getAllRegister();
