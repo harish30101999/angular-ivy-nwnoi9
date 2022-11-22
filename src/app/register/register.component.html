@@ -26,7 +26,7 @@
       required minlength="4" 
       [(ngModel)]="model.firstname" #name="ngModel">
 
-      <div *ngIf="name.invalid && (name.dirty || name.touched)"
+      <div *ngIf="name.invalid && (name.touched)"
     class="alert">
 
   <div *ngIf="name.errors?.['required']">
